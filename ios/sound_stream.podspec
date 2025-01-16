@@ -4,17 +4,18 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'sound_stream'
-  s.version          = '0.1.0'
-  s.summary          = 'A flutter plugin for streaming audio data from mic & to speaker'
+  s.version          = '0.0.1'
+  s.summary          = 'A flutter plugin for streaming speech data segments from mic'
   s.description      = <<-DESC
-  A flutter plugin for streaming audio data from mic & to speaker
+  A flutter plugin for streaming only speech audio data in segments from mic
                        DESC
-  s.homepage         = 'https://github.com/CasperPas/flutter-sound-stream'
+  s.homepage         = 'https://github.com/hn12404988/flutter-speech-stream'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Jeff Le' => 'me@jeffle.dev' }
+  s.author           = { 'Willy Forsure' => 'forsure.willy@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
+  s.frameworks = 'SoundAnalysis', 'Accelerate', 'Foundation', 'CoreML'
   s.platform = :ios, '13.0'
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
